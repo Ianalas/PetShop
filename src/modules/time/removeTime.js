@@ -8,7 +8,7 @@ agenda.addEventListener("click", ()=>{
     const listItems = horarioEl.querySelectorAll("li");
   
     listItems.forEach((li) => {
-      li.onclick = (e) => {
+      li.onclick = async (e) => {
         e.stopPropagation(); // Evita que o clique se propague para o pai
   
         // Seleciona a tag <a> dentro do <li> clicado
@@ -19,7 +19,7 @@ agenda.addEventListener("click", ()=>{
             const isConfirm = confirm("Confirma que deseja cancelar o agendamento?")
             if(isConfirm){
               console.log(id);
-              deleteTime({id})
+              await deleteTime({id})
               li.remove();
             }
           }
