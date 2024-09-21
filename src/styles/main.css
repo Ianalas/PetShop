@@ -1,0 +1,69 @@
+main{
+  z-index: -1;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 5rem;
+}
+
+.cabecalho{
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  background: none;
+  margin-bottom: 2rem;
+  & > div{
+    & h1{
+      font: var(--title);
+    }
+    & p{
+      color: var(--content-sec);
+      font: var(--parag-md);
+    }
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat center/cover;
+}
+
+.datas{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  border-radius: .5rem;
+  border: 1px solid var(--border-prim);
+  padding: .75rem;
+  height: 3rem;
+  width: 10.75rem;
+
+  & i{
+    height: 20px;
+  }
+  & input{
+    flex: 1;
+    color: var(--content-sec);
+    font-family: var(--fonte);
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+}
+
+.datas:has(input:focus){
+  border: 2px solid var(--content-brand);
+}
+
+@media (width < 80em) {
+  main{
+    padding: 20px;
+    
+  }
+  .cabecalho{
+    display: block;
+  }
+  .datas{
+    margin-top: .5rem;
+  }
+}

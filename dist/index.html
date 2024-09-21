@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fontes-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./src/assets/logo-petshop.svg">
+  
+  <title>PetShop</title>
+<link rel="icon" href="logo-petshop.svg"><script defer src="main.js"></script></head>
+<body>
+  <header class="popup">
+    <a href="#"><img src="./src/assets/logo-petshop.svg" alt="Mundo Pet"> Mundo Pet</a>
+  </header>
+  <main>
+    <header class="cabecalho">
+      <div>
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+      <div class="datas">
+        <i><img src="./src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="Calendário" /></i>
+        <input type="date" id="date" name="date" required />
+      </div>
+    </header>
+    <ul id="agenda">
+      <div class="periodo">
+        <li>
+          <h2><img src="./src/assets/Period-Manha.svg" alt="">Manhã</h2>
+          <strong>09h-12h</strong>
+        </li>
+        <div class="horario manha">
+          <li data-period="manha">
+            <h3>09:00</h3>
+            <p>Thor <span>/Fernanda Costa</span></p>
+            <small>Vacinação</small>
+            <a href="#">Remover agendamento</a>
+          </li>
+          <li data-period="manha">
+            <h3>09:00</h3>
+            <p>Thor <span>/Fernanda Costa</span></p>
+            <small>Vacinação</small>
+            <a href="#">Remover agendamento</a>
+          </li>
+        </div>
+      </div>
+
+      <div class="periodo">
+        <li>
+          <h2><img src="./src/assets/Period-Tarde.svg" alt="">Tarde</h2>
+          <strong>13h-18h</strong>
+        </li>
+        <div class="horario tarde">
+          <li data-period="manha">
+            <h3>09:00</h3>
+            <p>Thor <span>/Fernanda Costa</span></p>
+            <small>Vacinação</small>
+            <a href="#">Remover agendamento</a>
+          </li>
+          <li data-period="manha">
+            <h3>09:00</h3>
+            <p>Thor <span>/Fernanda Costa</span></p>
+            <small>Vacinação</small>
+            <a href="#">Remover agendamento</a>
+          </li>
+        </div>
+      </div>
+
+      <div class="periodo">
+        <li>
+          <h2><img src="./src/assets/Period-Noite.svg" alt="">Noite</h2>
+          <strong>19h-21h</strong>
+        </li>
+        <div class="horario noite">
+          <li data-period="manha">
+            <h3>09:00</h3>
+            <p>Thor <span>/Fernanda Costa</span></p>
+            <small>Vacinação</small>
+            <a href="#">Remover agendamento</a>
+          </li>
+        
+        </div>
+      </div>
+    </ul>
+  </main>
+  <button class="new-time" type="button">Novo Agendamento</button>
+  <div class="modal">
+    <small>X</small>
+    <section>
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+    </section>
+    <form>
+       <div class="col-2">
+        <label for="nameTutor">Nome do tutor</label>
+        <div class="input">
+          <i><img src="./src/assets/User--Streamline-Solar.svg" alt=""></i>
+          <input type="text" name="nameTutor" id="nameTutor" placeholder="Ex. Nome Sobrenome"> 
+        </div>
+       </div>
+       <div class="col-2">
+        <label for="namePet">Nome do pet</label>
+        <div class="input">
+          <i><img src="./src/assets/Pet-Paw--Streamline-Core.svg" alt=""></i>
+          <input type="text" name="namePet" id="namePet" placeholder="Ex. Thor">
+        </div>
+       </div>
+       <div class="col-2">
+        <label for="tel">Telefone</label>
+        <div class="input">
+          <i><img src="./src/assets/Phone--Streamline-Solar.svg" alt=""></i>
+          <input type="text" name="tel" id="tel" placeholder="(00) 91234-5678" required>
+        </div>
+       </div>
+       <div class="col-2">
+        <label for="description">Descrição do serviço</label>
+        <textarea name="description" id="description" placeholder="Ex. Tosa e banho"></textarea>
+       </div>
+      
+       <div>
+        <label for="data">Data</label>
+        <div class="datas">
+          <i><img src="./src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt=""></i>
+          <input type="date" name="data" id="data">
+         </div>
+       </div>
+       <div>
+        <label for="hora">Hora</label>
+        <div class="datas">
+          <i><img src="./src/assets/Clock-Circle--Streamline-Solar.svg" alt=""></i>
+          <input type="time" name="hora" id="hora">
+        </div>
+       </div>
+       <button type="submit">AGENDAR</button>
+    </form>
+  </div>
+</body>
+</html>

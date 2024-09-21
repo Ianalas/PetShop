@@ -1,0 +1,27 @@
+.popup{
+  position: fixed;
+  
+  background-color: #2E2C30;
+  padding: .75rem 1.25rem;
+  width: fit-content;
+  border-radius: 0 0 .75rem 0 ;
+
+  & a{
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font: bold 1rem/1.5rem  var(--fonte-Tight);
+    color: var(--content-brand);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  & img{
+    height: 20px;
+  }
+}
+
+@media (width < 80em) {
+  .popup{
+    position: static;
+  }
+}
